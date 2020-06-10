@@ -3,7 +3,8 @@ package sudojo
 object Solver {
 
   /**
-   * Solve the board by filling all empty fields. Returns None if board can't be solved.
+   * Solve the board by filling all empty fields. Returns None if board can't be solved. If the board is ambiguous,
+   * any solution is acceptable.
    * Sudoku rules:
    * - fields need to be filled with number from 1 to 9
    * - each line must not contain a number twice
