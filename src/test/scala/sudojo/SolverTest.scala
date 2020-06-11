@@ -56,4 +56,24 @@ class SolverTest extends AnyFlatSpec with Matchers {
     (Board.parse(inputRepr) >>= Solver.solve) shouldBe Board.parse(solutionRepr)
   }
 
+  "Tilman" should "be happy when" in {
+    val oneNumberBoard =
+      """1--------
+        |---------
+        |---------
+        |---------
+        |---------
+        |---------
+        |---------
+        |---------
+        |---------""".stripMargin
+
+    val board = Board.parse(oneNumberBoard).get
+    println(board)
+    Solver.possibleValues(0, 0, board) shouldBe Set(1)
+    Solver.possibleValues(0, 1, board) shouldBe Set(2, 3, 4, 5, 6, 7, 8, 9)
+    Solver.possibleValues(1, 0, board) shouldBe Set(2, 3, 4, 5, 6, 7, 8, 9)
+    Solver.possibleValues(1, 1, board) shouldBe Set(2, 3, 4, 5, 6, 7, 8, 9)
+  }
+
 }

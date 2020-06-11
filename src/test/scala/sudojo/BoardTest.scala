@@ -35,8 +35,8 @@ class BoardTest extends AnyFlatSpec with Matchers {
   }
 
   it should "round-trip parsing and pretty-printing successfully" in {
-    show"${Board.parse(filledBoardRepr)}" shouldBe filledBoardRepr
-    show"${Board.parse(emptyBoardRepr)}" shouldBe emptyBoardRepr
+    show"${Board.parse(filledBoardRepr).get}" shouldBe filledBoardRepr
+    show"${Board.parse(emptyBoardRepr).get}" shouldBe emptyBoardRepr
   }
 
 }
