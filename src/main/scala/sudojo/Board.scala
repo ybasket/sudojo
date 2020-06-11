@@ -10,7 +10,7 @@ object Board {
    * -56----2-
    * ...
    * where filled fields contain their digit, empty are represented by a dash and rows are separated by newlines.
-   * BONUS: Ignore whitespace.
+   * BONUS: Ignore whitespace and cell/row separators as demonstrated in [[Solver.solve()]].
    * */
   def parse(repr: String): Option[Board] = ???
 
